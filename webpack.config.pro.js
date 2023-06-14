@@ -4,7 +4,7 @@
  * @Author: xxc
  * @Date: 2023-05-08 21:53:24
  * @LastEditors: xxc
- * @LastEditTime: 2023-05-21 21:45:29
+ * @LastEditTime: 2023-05-27 15:04:16
  */
 const baseConfig = require("./webpack.config.base.js");
 const {merge} = require("webpack-merge");
@@ -41,7 +41,7 @@ const proConfig = {
       ],
     }),
     new MiniCssExtractPlugin({//开发模式不推荐用，会影响热更新
-      filename: 'css/[name][contenthash:8].css'
+      filename: 'static/css/[name][contenthash:8].css'
     }),
     // 去除没用到的css插件
     new PurgeCSSPlugin({
